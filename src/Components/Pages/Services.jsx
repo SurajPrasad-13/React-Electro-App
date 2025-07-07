@@ -5,10 +5,10 @@ import Gas from "../../assets/gas.jpg";
 import Electrician from "../../assets/electrician.jpg";
 import Painter from "../../assets/painter.jpg";
 import Cargo from "../../assets/cargo.jpg";
-import { motion } from "motion/react";
+import { easeIn, easeInOut, easeOut, motion } from "motion/react";
 
 const card =
-  " flex flex-col w-70 border rounded-xl items-center hover:shadow-2xl justify-center hover:scale-[1.02] transition duration-100 hover:bg-[#eaffea] m-3";
+  " flex flex-col w-50 md:w-70 border rounded-xl items-center hover:shadow-2xl justify-center hover:scale-[1.02] transition duration-100 hover:bg-[#eaffea] m-3 hover:bg-green-800 hover:text-white hover:transition hover:duration-500";
 
 const ServiceCards = [
   {
@@ -66,27 +66,27 @@ const Services = () => {
           Our Services
         </motion.div>
       </div>
-      <div className="grid grid-cols-1 text-center my-5  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto place-items-center ">
+      <div className="grid grid-cols-2 text-center my-5   md:grid-cols-3 lg:grid-cols-4 mx-auto place-items-center ">
         {ServiceCards.map((item, id) => {
           return (
             <motion.div
               initial={{ y: 20, scale: 0.9 }}
               whileInView={{ y: 0, scale: 1 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.6 ,ease:easeOut }}
               className={card}
             >
-              <div className=" w-70 rounded-t-xl border">
+              <div className=" w-50 md:w-70 rounded-t-xl">
                 <img
-                  className="h-35 rounded-t-xl w-full object-cover"
+                  className="h-25 md:h-35 rounded-t-xl w-full object-cover"
                   src={item.img}
                   alt=""
                 />
               </div>
-              <div className="p-2">
-                <h1 className="text-xl   cursor-pointer font-bold">
+              <div className="p-1">
+                <h1 className="md:text-xl   cursor-pointer font-bold">
                   {item.title}{" "}
                 </h1>
-                <p className="text-sm md:text-md  hover:text-green-800">
+                <p className="text-sm md:font-medium md:text-md ">
                   {item.price}
                 </p>
               </div>

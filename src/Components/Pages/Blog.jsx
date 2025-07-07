@@ -48,7 +48,7 @@ function Blogs() {
               <img
                 src={item.img}
                 alt="blog"
-                className="w-full object-cover rounded-md h-55 "
+                className="w-full object-cover rounded-md h-40 "
               />
               <div className="mt-3 flex-grow flex flex-col justify-between">
                 <h6 className="font-semibold text-[0.95rem]">
