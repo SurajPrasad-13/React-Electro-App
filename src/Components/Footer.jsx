@@ -74,7 +74,7 @@ const Footer = () => {
             <p>For Consumer Camplaints, Contact:</p>
             <p>Customer Service Executive</p>
             <p className="flex justify-start  items-center gap-2 hover:text-white">
-              <FaPhoneAlt className="hover:scale-120 hover:rotate-20" /> +91 98765 43213
+              <FaPhoneAlt /> +91 98765 43213
             </p>
             <p className="flex justify-start  items-center gap-2 mb-5 hover:text-white">
               <MdEmail /> constructionServices32@gmail.com

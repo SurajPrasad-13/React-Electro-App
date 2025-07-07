@@ -53,16 +53,10 @@ const sliderData = [
     img: "../../../waterServices.jpg",
   },
   {
-    img: "../../../electrician.jpg",
-  },
-  {
     img: "https://www.bls.gov/careeroutlook/2017/images/water_cover.jpg",
   },
   {
     img: "https://plus.unsplash.com/premium_photo-1681691912442-68c4179c530c?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    img: "../../../construction.jpg",
   },
   {
     img: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
