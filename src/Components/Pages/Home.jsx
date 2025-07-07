@@ -1,4 +1,3 @@
-// import Carousel from "react-bootstrap/Carousel";
 import construction from "../../assets/construction.jpg";
 import engineer from "../../assets/electrician.jpg";
 import feature1 from "../../assets/img2.jpg";
@@ -11,7 +10,6 @@ import gaspipe from "../../assets/gas.jpg";
 import maps from "../../assets/map.png";
 import service from "../../assets/waterServices.jpg";
 import waterpipe from "../../assets/water.jpg";
-import Carousel from "../Pages/Carousel";
 import Video from "../../assets/video.mp4";
 import "../../CSS/home.css";
 import { motion } from "motion/react";
@@ -52,72 +50,39 @@ const serviceData = [
 
 const sliderData = [
   {
-    img: "../../../public/waterServices.jpg",
+    img: "../../../waterServices.jpg",
   },
   {
-    img: "../../../public/construction.jpg",
+    img: "../../../electrician.jpg",
   },
   {
-    img: "../../../public/electrician.jpg",
+    img: "https://www.bls.gov/careeroutlook/2017/images/water_cover.jpg",
   },
   {
-    img: "../../../public/waterServices.jpg",
+    img: "https://plus.unsplash.com/premium_photo-1681691912442-68c4179c530c?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    img: "../../../public/construction.jpg",
+    img: "../../../construction.jpg",
   },
   {
-    img: "../../../public/electrician.jpg",
+    img: "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    img: "../../../public/waterServices.jpg",
+    img: "https://images.unsplash.com/photo-1527199768775-bdabf8b32f61?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    img: "../../../public/construction.jpg",
-  },
-  {
-    img: "../../../public/electrician.jpg",
-  },
-  {
-    img: "../../../public/waterServices.jpg",
-  },
-  {
-    img: "../../../public/construction.jpg",
-  },
-  {
-    img: "../../../public/electrician.jpg",
-  },
-  {
-    img: "../../../public/waterServices.jpg",
-  },
-  {
-    img: "../../../public/construction.jpg",
-  },
-  {
-    img: "../../../public/electrician.jpg",
-  },
-  {
-    img: "../../../public/waterServices.jpg",
-  },
-  {
-    img: "../../../public/construction.jpg",
-  },
-  {
-    img: "../../../public/electrician.jpg",
+    img: "https://5.imimg.com/data5/SELLER/Default/2024/6/429178565/EC/FF/DY/76226430/electrician-services.jpeg",
   },
 ];
 
 function Home() {
   const settings1 = {
-    dots: true,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 1000,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
   };
   const settings2 = {
     dots: true,
@@ -125,8 +90,8 @@ function Home() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    // nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />,
   };
   //settings for previous arrow
   function SampleNextArrow(props) {
@@ -152,17 +117,19 @@ function Home() {
   }
 
   const slides = [
-    "https://images.livemint.com/img/2022/06/20/600x338/labour1--621x414_1655737046895.JPG",
-    "https://5.imimg.com/data5/SELLER/Default/2024/6/429178565/EC/FF/DY/76226430/electrician-services.jpeg",
     "https://www.bls.gov/careeroutlook/2017/images/water_cover.jpg",
+    "https://plus.unsplash.com/premium_photo-1681691912442-68c4179c530c?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://images.unsplash.com/photo-1527199768775-bdabf8b32f61?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://5.imimg.com/data5/SELLER/Default/2024/6/429178565/EC/FF/DY/76226430/electrician-services.jpeg",
   ];
   return (
-    <div className="h-auto bg-amber-50 ">
+    <div className="h-auto  ">
       {/* Video on Home Page */}
-      <div className="h-auto  flex flex-wrap items-end justify-around gap-5 ">
+      <div className="h-auto bg-gray-500  flex flex-wrap items-end justify-around gap-5 ">
         <div className=" w-140 sm:w-150 md:w-160 lg:w-170 ">
           <video
-            className="w-200 h-[70vh]"
+            className="w-200 h-[85vh]"
             src={Video}
             loop
             controls
@@ -170,25 +137,25 @@ function Home() {
             muted
           ></video>
         </div>
-        {/* First Slide with Arrow buttons */}
-        <div className="">
-          <div className=" my-7 w-60 md:w-80  m-auto ">
+        <div className=" flex flex-col items-start mb-12">
+          {/* First Slide with Arrow buttons */}
+          <div className=" my-4 w-80 md:w-90  m-auto ">
             <Slider {...settings2}>
               {slides.map((s) => (
-                <img src={s} alt="" />
+                <img className=" h-60" src={s} alt="" />
               ))}{" "}
             </Slider>
           </div>
-          {/* Automatic slide */}
-          <div className="my-7 w-80 md:w-90  m-auto ">
-            <div className="overflow-hidden">
+          {/* Second Automatic slide */}
+          <div className="my-4 w-80 md:w-90  m-auto ">
+            <div className="">
               <Slider {...settings1}>
                 {sliderData.map((item, i) => (
-                  <div className="second-slider flex w-max gap-5 mx-5 items-center">
+                  <div className="px-1">
                     <img
                       src={item.img}
                       alt=""
-                      className="w-[200px] h-[80px] rounded-[10px] object-cover"
+                      className="w-[200px] h-[80px] rounded-[10px] mx-2 object-cover"
                     />
                   </div>
                 ))}
@@ -198,7 +165,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center items-center gap-2 p-5 bg-blue-200 mt-8">
+      <div className="flex flex-wrap justify-center items-center gap-2 p-5 bg-blue-200 ">
         {serviceData.map((item, i) => {
           return (
             <motion.div
