@@ -15,35 +15,54 @@ import Painter from "../../assets/painter.jpg";
 import Cargo from "../../assets/cargo.jpg";
 import { motion } from "motion/react";
 
-// import background from '../../../public/backgroundImage.jpg'
-
-const card =
-  " flex flex-col w-65 border rounded items-center justify-around hover:scale-[1.02] transition duration-100 hover:bg-[#eaffea] m-3";
+const workSliderData = [
+  {
+    img: Construction, title: "We Hire Constructors"
+  },
+  {
+    img: Gas, title: "We Hire CNG Operator"
+  },
+  {
+    img: Cargo, title: "We Hire Cargo Drivers"
+  },
+  {
+    img: Painter, title: "We Hire Paint Workers"
+  },
+  {
+    img: Electrician, title: "We Hire Electricians"
+  },
+  {
+    img: Water, title: "We Hire Water Engineer"
+  }
+];
 const JoinUs = () => {
   return (
     <div className="w-full py-3 h-full bg-cover bg-center ">
-      <div 
+      <div
         style={{
           backgroundImage: `url('../../../public/backgroundImage.jpg')`,
         }}
         className="h-[91vh] bg-cover bg-center py-22"
       >
-        <motion.div initial={{y:80,scale:0.7}} whileInView={{y:0,scale:1}} transition={{duration:0.6}} >
-        <h1
-          className=" text-center text-4xl md:text-6xl font-extrabold p-5
-        "
+        <motion.div
+          initial={{ y: 80, scale: 0.9 }}
+          whileInView={{ y: 0, scale: 1 }}
+          transition={{ duration: 0.6 }}
         >
-          OUR PEOPLE ARE <br />
-          OUR GREATEST ASSETS.
-        </h1>
-        <h1
-          className=" text-center text-xl md:text-3xl font-semibold p-5
+          <h1
+            className=" text-center text-4xl md:text-6xl font-extrabold p-5
         "
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quidem
-          itaque iure.
-        </h1>
-
+          >
+            OUR PEOPLE ARE <br />
+            OUR GREATEST ASSETS.
+          </h1>
+          <h1
+            className=" text-center text-xl md:text-3xl font-semibold p-5
+        "
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+            quidem itaque iure.
+          </h1>
         </motion.div>
       </div>
       <div className=" ">
@@ -104,86 +123,34 @@ const JoinUs = () => {
           <h2 className=" cursor-pointer flex items-center gap-2 text-2xl font-semibold">
             We Are Providing Jobs for <FaLongArrowAltRight />
           </h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center ">
-            <div className={card}>
-              <div className="m-2">
-                <img className="h-30 w-55" src={Water} alt="" />
-              </div>
-              <div className="p-2">
-                <h1 className="text-xl  md:text-2xl cursor-pointer font-bold">
-                  Water Engineer
-                </h1>
-                <p className="text-md md:text-lg font-semibold hover:text-green-800">
-                  We are hiring for Water Engineer
-                </p>
-              </div>
-            </div>
-            <div className={card}>
-              <div className="m-2">
-                <img className="h-30 w-55" src={Construction} alt="" />
-              </div>
-              <div className="p-2">
-                <h1 className="text-xl  md:text-2xl cursor-pointer font-bold">
-                  civil Engineer
-                </h1>
-                <p className="text-md md:text-lg font-semibold hover:text-green-800">
-                  We are hiring for Civil Engineer
-                </p>
-              </div>
-            </div>
-            <div className={card}>
-              <div className="m-2">
-                <img className="h-30 w-55" src={Gas} alt="" />
-              </div>
-              <div className="p-2">
-                <h1 className="text-xl  md:text-2xl cursor-pointer font-bold">
-                  CNG Operator
-                </h1>
-                <p className="text-md md:text-lg font-semibold hover:text-green-800">
-                  We are hiring for CNG Gas Operator
-                </p>
-              </div>
-            </div>
-            <div className={card}>
-              <div className="m-2">
-                <img className="h-30 w-55" src={Electrician} alt="" />
-              </div>
-              <div className="p-2">
-                <h1 className="text-xl  md:text-2xl cursor-pointer font-bold">
-                  Electrician
-                </h1>
-                <p className="text-md md:text-lg font-semibold hover:text-green-800">
-                  We are hiring for Electric Engineers
-                </p>
-              </div>
-            </div>
-            <div className={card}>
-              <div className="m-2">
-                <img className="h-30 w-55" src={Painter} alt="" />
-              </div>
-              <div className="p-2">
-                <h1 className="text-xl  md:text-2xl cursor-pointer font-bold">
-                  Painters
-                </h1>
-                <p className="text-md md:text-lg font-semibold hover:text-green-800">
-                  We are hiring for Painter Workers
-                </p>
-              </div>
-            </div>
-            <div className={card}>
-              <div className="m-2">
-                <img className="h-30 w-55" src={Cargo} alt="" />
-              </div>
-              <div className="p-2">
-                <h1 className="text-xl  md:text-2xl cursor-pointer font-bold">
-                  Cargo Manager
-                </h1>
-                <p className="text-md md:text-lg font-semibold hover:text-green-800">
-                  We are hiring for Cargo Manager
-                </p>
-              </div>
-            </div>
+          {/* Cards for Provided work */}
+          <div className="grid grid-cols-1 text-center my-5  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto place-items-center  ">
+            {workSliderData.map((item) => {
+              return (
+                <motion.div
+                  initial={{ y: 20, scale: 0.9 }}
+                  whileInView={{ y: 0, scale: 1 }}
+                  transition={{ duration: 0.4 }}
+                  className=" flex flex-col w-70 border rounded items-center hover:shadow-2xl justify-around hover:scale-[1.02] transition duration-100 hover:bg-[#eaffea] m-3"
+                >
+                  <div className=" w-70 rounded-t border">
+                    <img
+                      className="h-35 rounded-t w-full object-cover"
+                      src={item.img}
+                      alt=""
+                    />
+                  </div>
+                  <div className="p-2">
+                    <h1 className="text-xl   cursor-pointer font-bold">
+                      {item.title}
+                    </h1>
+                    <p className="text-sm md:text-md  hover:text-green-800">
+                      Lorem ipsum dolor sit amet.
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </div>

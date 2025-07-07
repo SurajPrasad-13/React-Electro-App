@@ -29,7 +29,7 @@ function Blogs() {
           initial={{ y: 70, opacity: 0.7 }}
           animate={{ y: 0, opacity: 1.4 }}
           transition={{ duration: 1 }}
-          className="text-center font-bold text-7xl  mb-10"
+          className="text-center font-bold text-7xl mb-10"
         >
           Blogs and Articles
         </motion.h2>

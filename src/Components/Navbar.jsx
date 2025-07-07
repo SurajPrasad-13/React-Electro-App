@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../App.css";
-// import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { motion } from "motion/react";
 
@@ -16,7 +15,7 @@ const Navbar = () => {
         className=" flex items-center  justify-between py-2 px-4 md:py-3 "
       >
         <div className="text-4xl font-semibold">
-          <NavLink to="/">Logo</NavLink>
+          <NavLink to="/">Electro</NavLink>
         </div>
 
         <div className=" hidden sm:block">
